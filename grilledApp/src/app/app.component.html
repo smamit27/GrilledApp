@@ -1,20 +1,343 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+  <header class="navigation">
+    <nav class="navigation__header-nav">
+        <img src="Images/logo.svg" alt="The Grilled Prawn" class="navigation__header-logo">
+        <span class="navigation__header-logo-text"> The Grilled Prawan</span>
+        <ul class="navigation__header-nav--ul" id="nav" >
+            <li class="navigation__header-nav--li"><a class="navigation__header-nav--a">RECIPES</a></li>
+            <li class="navigation__header-nav--li"><a class="navigation__header-nav--a">DRINKS</a></li>
+            <li class="navigation__header-nav--li"><a class="navigation__header-nav--a">DECORATIONS</a></li>
+            <li class="navigation__header-nav--li"><a class="navigation__header-nav--a">ABOUT THE GRILLED PRAWN</a></li>
+            <li class="navigation__header-nav--li"><a  style="font-size:15px;" class="icon" onclick="navigation()">☰</a>
+        </ul>
+    </nav>
+</header>
+<section class="slider">
+    <div class="slider__left-content ">
+        <img src="Images/recipe.svg" alt="The Grilled Prawn" class="slider__image">
+    </div>
+    <div class="slider__right-content">
+        <h3 class="grilled__h3">LATEST RECIPE</h3>
+        <h1 class="grilled__h1">Baked Polenta with Cheese and Mushrooms.</h1>
+        <p class="grilled__p">Polenta, goat cheese, Italian sausage, and cremini mushrooms. All together this will
+            make for pretty darn good side dish to a lovely salad. Go for it.</p>
+        <button class="btn grilled__slider--button ">Go to Recipe<img src="Images/arrow_right.png" alt="Go To Recipe"
+                class="slider__image-arrow"></button>
+    </div>
+</section>
+<section class="filter__recipe-type">
+    <h1 class="filter__recipe-heading">Our Recipes</h1>
+    <div class="filter__search-by">
+        <button class="btn btn__filter" onclick="toggleAccordion()">Filter recipes by <span>-</span>
+        </button>
+        <span class="filter__sort-by">Sort By</span>
+        <button class="btn btn__sortBy"> Newest first<img src="Images/shape.svg" alt="Sort By">
+        </button>
+        <div class="filter__search">
+            <img src="Images/search.svg" class="filter__search_icon" alt="Search">
+            <span class="filter__search-text">Search recipe</span>
+        </div>
+    </div>
+    <div class="filter__recipe-accordion" id="filter-accordion-list">
+        <div class="grilled__col-3 grilled__box">
+            <h3 class="grilled__h3 grilled__mtm ">Food type:</h3>
+            <label class="container">Appetisers
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Mains
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Desserts
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Special Occasions
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="grilled__col-3 grilled__box">
+            <h3 class="grilled__h3 grilled__mtm grilled_box"> Nationality:</h3>
+            <label class="container"> Italian (34)
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container"> French (30)
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">
+                Spanish (22)
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Peruvian (3)
+
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="grilled__col-3 grilled_box grilled--mtl">
+            <label class="container"> Chinese (18)
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Indian (13)
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Thai (10)
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Norwegian (4)
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class=" grilled__col-3 grilled_box grilled--mtl">
+            <label class="container">Polish (2)
+
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container"> Danish (3)
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Belgian (7)
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container"> Persian (13)
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="recipe__main-container">
+        <div class="recipe__list grilled__box recipe__list-container ">
+            <div class="recipe__upper">
+                <span class="recipe__date">5TH MARCH 2016 </span>
+                <span class="recipe__place">Thai</span>
+            </div>
+            <p class="recipe__list-content">Thai Yellow Curry Noodles with Shiitake Mushrooms</p>
+            <div class="recipe__image">
+                <img src="Images/recipe2.png" alt="Recipe">
+            </div>
+        </div>
+        <div class="recipe__list grilled__box recipe__list-container ">
+            <div class="recipe__upper">
+                <span class="recipe__date">17TH MARCH 2016 </span>
+                <span class="recipe__place">ITELIAN</span>
+            </div>
+            <p class="recipe__list-content">Cappellini with Cherry Tomatoes and Fresh Basil</p>
+            <div class="recipe__image">
+                <img src="Images/recipe3.png" alt="Recipe">
+            </div>
+        </div>
+        <div class="recipe__list grilled__box recipe__list-container ">
+            <div class="recipe__upper">
+                <span class="recipe__date">5TH MARCH 2016 </span>
+                <span class="recipe__place">Thai</span>
+            </div>
+            <p class="recipe__list-content">Baked Turkey Sausage and Mascarpone Stuffed Shells</p>
+            <div class="recipe__image">
+                <img src="Images/recipe4.png" alt="Recipe">
+            </div>
+        </div>
+        <div class="recipe__list grilled__box recipe__list-container ">
+            <div class="recipe__upper">
+                <span class="recipe__date">5TH MARCH 2016 </span>
+                <span class="recipe__place">Thai</span>
+            </div>
+            <p class="recipe__list-content">Caramelised Apple and Herb Fiocchi</p>
+            <div class="recipe__image">
+                <img src="Images/recipe5.png" alt="Recipe">
+            </div>
+        </div>
+        <div class="recipe__list grilled__box recipe__list-container ">
+            <div class="recipe__upper">
+                <span class="recipe__date">5TH MARCH 2016 </span>
+                <span class="recipe__place">Thai</span>
+            </div>
+            <p class="recipe__list-content">Pumpkin Beer Cheese Soup</p>
+            <div class="recipe__image">
+                <img src="Images/recipe6.png" alt="Recipe">
+            </div>
+        </div>
+        <div class="recipe__list grilled__box recipe__list-container ">
+            <div class="recipe__upper">
+                <span class="recipe__date">5TH MARCH 2016 </span>
+                <span class="recipe__place">Thai</span>
+            </div>
+            <p class="recipe__list-content">Yum Woon Sen with Shrimp (Glass noodle salad with Shrimp)</p>
+            <div class="recipe__image">
+                <img src="Images/recipe7.png" alt="Recipe">
+            </div>
+        </div>
+        <div class="recipe__list grilled__box recipe__list-container ">
+            <div class="recipe__upper">
+                <span class="recipe__date">5TH MARCH 2016 </span>
+                <span class="recipe__place">Thai</span>
+            </div>
+            <p class="recipe__list-content">Beef Satay</p>
+            <div class="recipe__image">
+                <img src="Images/recipe8.png" alt="Recipe">
+            </div>
+        </div>
+        <div class="recipe__list grilled__box recipe__list-container ">
+            <div class="recipe__upper">
+                <span class="recipe__date">5TH MARCH 2016 </span>
+                <span class="recipe__place">Thai</span>
+            </div>
+            <p class="recipe__list-content">Creamy French Onion Soup Dip in a Bread Bowl</p>
+            <div class="recipe__image">
+                <img src="Images/recipe9.png" alt="Recipe">
+            </div>
+        </div>
+        <div class="recipe__list grilled__box recipe__list-container ">
+            <div class="recipe__upper">
+                <span class="recipe__date">5TH MARCH 2016 </span>
+                <span class="recipe__place">Thai</span>
+            </div>
+            <p class="recipe__list-content">Bocadillo Bites</p>
+            <div class="recipe__image">
+                <img src="Images/recipe10.png" alt="Recipe">
+            </div>
+        </div>
+        <div class="recipe__list grilled__box recipe__list-container ">
+            <div class="recipe__upper">
+                <span class="recipe__date">5TH MARCH 2016 </span>
+                <span class="recipe__place">Thai</span>
+            </div>
+            <p class="recipe__list-content">Paella</p>
+            <div class="recipe__image">
+                <img src="Images/recipe11.png" alt="Recipe">
+            </div>
+        </div>
+        <div class="recipe__list grilled__box recipe__list-container ">
+            <div class="recipe__upper">
+                <span class="recipe__date">5TH MARCH 2016 </span>
+                <span class="recipe__place">Thai</span>
+            </div>
+            <p class="recipe__list-content">Spicy black Bean Burger</p>
+            <div class="recipe__image">
+                <img src="Images/recipe3.png" alt="Recipe">
+            </div>
+        </div>
+        <div class="recipe__list grilled__box recipe__list-container ">
+            <div class="recipe__upper">
+                <span class="recipe__date">5TH MARCH 2016 </span>
+                <span class="recipe__place">Thai</span>
+            </div>
+            <p class="recipe__list-content">Thai Yellow Curry Noodles with Shiitake Mushrooms</p>
+            <div class="recipe__image">
+                <img src="Images/recipe.svg" alt="Recipe">
+            </div>
+        </div>
+    </div>
+
+</section>
+<section>
+    <div class="news">
+        <div class="news__header">
+            <h1 class="news__header-h1">Spread the word !</h1>
+            <p class="news__header-p">Our recipes are awesome,signup to our newsletter and invite friends to join
+                the gilled
+                prawn cult
+            </p>
+        </div>
+        <div class="news__section">
+            <div class="news__inline-list">
+                <label for="news-list-name" class="news__inline-label">Name</label>
+                <input type="text" name="news-name">
+            </div>
+
+            <div class="news__inline-list">
+                <label for="news-surname" class="news__inline-label">Surname</label>
+                <input type="text" name="news-surname">
+            </div>
+            <div class="news__inline-list">
+                <label for="news-email" class="news__inline-label">Email address </label>
+                <input type="text" name="news-email">
+            </div>
+            <div class="news__inline-list news__remove" id="delete">
+                <img src="Images/remove.svg" alt="Remove">Remove</div>
+            <div id="news__inline">
+                <div class="news__inline-list">
+                    <label for="name" class="news__inline-label">Name</label>
+                    <input type="text" id="name" name="name" />
+                    <span id="news__validate-name" class="news_hidden">Please Enter Only Name</span>
+                </div>
+                <div class="news__inline-list">
+                    <label for="surname" class="news__inline-label">Surname</label>
+                    <input type="text" id="surname" name="surname" />
+                </div>
+                <div class="news__inline-list">
+                    <label for="email" class="news__inline-label">Email address </label>
+                    <input type="text" id="email" name="email" />
+                    <span id="news__validate-email" class="news_hidden">Please enter a valid email address</span>
+                </div>
+                <div class="news__inline-list">
+                    <button type="submit" class="btn btn__add">Add Friend </button>
+                </div>
+                <div class="news__align">
+                    <button class="btn btn__send " id="news__send">Send <img src="Images/arrow_right.png" alt="Send Recipe"
+                            class="slider__image-arrow">
+                    </button>
+                </div>
+            </div>
+            <div id="news__hide-message" class="news_hidden">We can not add more than 5 Friend </div>
+
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="about__information">
+        <div class="about__information-history">
+            <div class="grilled__col-3 grilled__box">
+                <h3>Our Recipes</h3>
+                <p>All our recipes are tested thoroughly by us to make sure they’re suitable for your kitchen
+                    at home. We know many of you are concerned about healthy eating, so we send them to a
+                    qualified nutritionist for thorough analysis too.
+                    Browse our recipes now</p>
+            </div>
+            <div class="grilled__col-3 grilled__box">
+                <h3>Grilled Praw’s History</h3>
+
+                <p>The Grilled Prawn is a fictional food blog created in January 2015.</p>
+            </div>
+            <div class="grilled__col-3 grilled__box">
+                <h3>Tips and Tricks</h3>
+                <p>Not sure how to do something? Don’t panic. We have plenty of tutorials for you.
+                    Learn more</p>
+            </div>
+            <div class="grilled__col-3 grilled__box">
+                <h3>Help and Contact</h3>
+                <p>
+                    Struggling with one of the recipes?
+                    Send us an email
+
+                    We are always happy to try new things, send us your suggestions!
+                    Fill in the form
+                </p>
+            </div>
+        </div>
+
+        <div class="about__information-place">
+            <p>
+                © The Grilled Prawn
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet, lectus quis interdum
+                viverra, erat mi consectetur mi, a fringilla odio risus vel augue. Mauris tempor ligula
+                fringilla magna iaculis, non vulputate tellus interdum.
+                The images and recipes ideas were taken from spoonforkbacon.com and the icons from Google
+                Material Icons.
+            </p>
+        </div>
+    </div>
+</footer>
