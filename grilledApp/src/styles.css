@@ -325,27 +325,25 @@ footer {
 /* ---------------------------------------------- */
 
 .grilled__box img {
-	width: 20vw;
+	width: 100%;
     height: 40vh;
 }
 .recipe__list {
-	width:22%;
+	width:29%;
 	float:left;
 }
 .recipe__main-container {
-    padding: 45px;
-    float:left;
-    background: #f6f6f6;
+   background: #f6f6f6;
 
 }
 .recipe__list-container {
 	margin: 10px 15px 10px 20px;
 	background: #fff;
-	padding: 0px;
+	padding-left: 40px;
 }
-.recipe__upper {
+/* .recipe__upper {
 	padding: 10px;
-}
+} */
 .recipe__date {
 	float:left;
 	font-size: 10px;
@@ -357,9 +355,8 @@ footer {
 	color:#4A4A4A;
 }
 .recipe__list-content {
-	margin-top: 10px;
-	height: 60px;
-	padding: 10px;
+	margin-top: 20px;
+    height: 60px;
 }
 
 
@@ -496,6 +493,9 @@ footer {
     /* Section Slider */
     .slider__left-content ,.slider__right-content,.recipe__list,.about__information-history,.about__information-place  {
         width: 100%;
+	}
+	.recipe__list-container {
+		padding-left: 0px;
 	}
 	.grilled__box img {
 		width: 100%;

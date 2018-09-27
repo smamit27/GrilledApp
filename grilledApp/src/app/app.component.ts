@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 @Component({
@@ -6,11 +6,6 @@ import { Component, OnInit, DoCheck } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit , DoCheck {
+export class AppComponent  {
   title = 'grilledApp';
-  ngOnInit() {}
-  ngDoCheck() {
-    console.log(`Hello World`);
-  }
-
 }
