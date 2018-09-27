@@ -337,9 +337,9 @@ footer {
 
 }
 .recipe__list-container {
-	margin: 10px 15px 10px 20px;
-	background: #fff;
-	padding-left: 40px;
+	margin: 10px 0px 10px 40px;
+    background: #fff;
+    padding-left: 25px;
 }
 /* .recipe__upper {
 	padding: 10px;
