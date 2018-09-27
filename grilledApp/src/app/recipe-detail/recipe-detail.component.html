@@ -4,9 +4,9 @@
         <div class="recipe__list grilled__box recipe__list-container ">
             <div class="recipe__upper">
                 <span class="recipe__date">{{data.recipe_date}} </span>
-                <span class="recipe__place">Thai</span>
+                <span class="recipe__place">{{data.recipe_place}}</span>
             </div>
-            <p class="recipe__list-content">Thai Yellow Curry Noodles with Shiitake Mushrooms</p>
+            <p class="recipe__list-content">{{data.recipe_desc}}</p>
             <div class="recipe__image">
                 <img [src]="data.imagePath" alt="Recipe">
             </div>
