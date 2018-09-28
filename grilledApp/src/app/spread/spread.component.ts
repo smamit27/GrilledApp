@@ -11,5 +11,8 @@ export class SpreadComponent implements OnInit {
 
   ngOnInit() {
   }
+  addFriend() {
+    alert(`Hello`);
+  }
 
 }
