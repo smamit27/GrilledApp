@@ -1,17 +1,16 @@
 <section>
     <div *ngFor="let data of recipeData">
-    <div class="recipe__main-container" >
-        <div class="recipe__list grilled__box recipe__list-container ">
-            <div class="recipe__upper">
-                <span class="recipe__date">{{data.recipe_date}} </span>
-                <span class="recipe__place">{{data.recipe_place}}</span>
-            </div>
-            <p class="recipe__list-content">{{data.recipe_desc}}</p>
-            <div class="recipe__image">
-                <img [src]="data.imagePath" alt="Recipe">
+        <div class="recipe__main-container">
+            <div class="recipe__list grilled__box recipe__list-container ">
+                <div class="recipe__upper">
+                    <span class="recipe__date">{{data.recipe_date}} </span>
+                    <span class="recipe__place">{{data.recipe_place}}</span>
+                </div>
+                <p class="recipe__list-content">{{data.recipe_desc}}</p>
+                <div class="recipe__image">
+                    <img [src]="data.imagePath" alt="Recipe">
+                </div>
             </div>
         </div>
     </div>
-</div>
-           
 </section>

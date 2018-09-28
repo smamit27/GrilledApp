@@ -7,12 +7,12 @@ import { RecipeService } from '../recipe.service';
 })
 export class RecipeDetailComponent implements OnInit {
   public recipeData;
-  constructor(private recipeService: RecipeService) {}
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
     this.getRecipe();
   }
-  getRecipe () {
+  getRecipe() {
     this.recipeService.getRecipe()
       .subscribe((data) => {
         this.recipeData = data;

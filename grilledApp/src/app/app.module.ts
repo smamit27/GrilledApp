@@ -10,6 +10,7 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { SpreadComponent } from './spread/spread.component';
 import { RecipeFooterComponent } from './recipe-footer/recipe-footer.component';
 import {RecipeService} from './recipe.service';
+import { ToggleMenuDirective } from './toggle-menu.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {RecipeService} from './recipe.service';
     RecipeFilterComponent,
     RecipeDetailComponent,
     SpreadComponent,
-    RecipeFooterComponent
+    RecipeFooterComponent,
+    ToggleMenuDirective
   ],
   imports: [
     BrowserModule,
